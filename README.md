@@ -1,4 +1,4 @@
-# FOCUS Converter (This version is only for AWS)
+# FOCUS Converter (This version is only applicable to AWS.)
 
 The FOCUS Converter is a command-line utility to convert billing data files from popular public cloud providers,
 such as **Amazon Web Services**, **Microsoft Azure**, **Google Cloud** and **Oracle Cloud**, into the common
