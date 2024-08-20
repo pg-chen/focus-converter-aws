@@ -1,0 +1,4 @@
+plan_name: convert resource_tags to Tags
+conversion_type: rename_column
+column: resource_tags
+focus_column: Tags

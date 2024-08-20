@@ -1,0 +1,4 @@
+plan_name: convert product_servicecode to x_ServiceCode
+conversion_type: rename_column
+column: product_servicecode
+focus_column: x_ServiceCode

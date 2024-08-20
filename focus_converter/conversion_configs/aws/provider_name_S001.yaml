@@ -1,0 +1,4 @@
+plan_name: convert bill_billing_entity to ProviderName
+conversion_type: rename_column
+column: bill_billing_entity
+focus_column: ProviderName

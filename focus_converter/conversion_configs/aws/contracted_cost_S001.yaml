@@ -1,0 +1,9 @@
+plan_name: convert line_item_unblended_rate and line_item_usage_amount to ContractedCost
+conversion_type: sql_query
+conversion_args: >
+    SELECT
+    *,
+    cast(line_item_unblended_rate as double) * cast(line_item_usage_amount as double) AS ContractedCost
+    FROM {{ TABLE_NAME }}
+column: NA
+focus_column: ContractedCost

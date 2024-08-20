@@ -1,0 +1,9 @@
+plan_name: convert product_region_code to RegionName
+conversion_type: map_values
+conversion_args:
+    value_list:
+        - key: us-east-1
+          value: US East (N. Virginia)
+    default_value: ""
+column: product_region_code
+focus_column: RegionName

@@ -1,0 +1,4 @@
+plan_name: convert line_item_usage_type to x_UsageType
+conversion_type: rename_column
+column: line_item_usage_type
+focus_column: x_UsageType
