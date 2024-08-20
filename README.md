@@ -1,4 +1,4 @@
-# FOCUS Converter
+# FOCUS Converter (This version is only for AWS)
 
 The FOCUS Converter is a command-line utility to convert billing data files from popular public cloud providers,
 such as **Amazon Web Services**, **Microsoft Azure**, **Google Cloud** and **Oracle Cloud**, into the common
@@ -30,52 +30,49 @@ Rules are also exported per provider in the following directories based on forma
 * **Markdown**: [Rules Export Markdown]
 * **CSV**: [Rules Export CSV]
 
-## Installation
-
-The FOCUS converter supports Python 3.9 and above. If you meet these requirements, you can install with pip:
-
-```sh
-pip install focus_converter
-```
-
-After this, you will have a script called `focus-converter` in your path.
-
-## Example Usage
-
-```bash
-focus-converter convert --provider aws --data-path path/to/aws/parquet/cur/ --data-format parquet --parquet-data-format dataset --export-path /tmp/output/
-```
-
-Use `focus-converter list-providers` to see the other providers that are supported.
-
 ## Development setup
 
 1. Clone this repository.
-2. [Install Poetry] if you don't have it.
-3. [Install libmagic] if you don't have it.
-4. Run the following shell snippet:
+1. [Install Poetry]
+    ```sh
+    curl -sSL https://install.python-poetry.org | python3 -
+    export PATH="/home/pg103426/.local/bin:$PATH"
+    ```
+1. [Install AWS CLI]
+    ```sh
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install
+    ```
+1. Add credential to aws config file
+    `aws configure --profile cathay-finops-internal`
+1. Run the following shell snippet:
+    ```sh
+    cd focus-converter-aws/
+    poetry install --only main --no-root
+    poetry shell
+    ```
 
-```sh
-cd focus_converter_base/
-poetry install --only main --no-root
+
+
+## Example Usage
+
+1. Local
+```bash
+python -m focus_converter.main convert --provider aws --data-path /Users/pg/Desktop/Work/Project/TW-CathayFinOps/SampleData/CUR2024-07.snappy.parquet --data-format parquet --parquet-data-format dataset --export-path /Users/pg/Desktop/Work/Project/TW-CathayFinOps/SampleData/
 ```
 
-Before using `python -m focus_converter.main` as a substitute for the pre-installed `focus-converter` script and testing
-repository changes, ensure to run the `poetry shell` command to set up the environment correctly.
+2. Cloud Shell
+```bash
+python -m focus_converter.main convert \
+    --provider aws \
+    --data-path s3://jay-cur-demo/momo-cur/demo/data/BILLING_PERIOD=2024-08/demo-00001.snappy.parquet \
+    --data-format parquet \
+    --parquet-data-format s3 \
+    --export-format s3 \
+    --export-path s3://benson-test-cathay-finops/focus-converter/
+``` 
 
-## Provider Progress
-
-Look at [pie charts] showing the progress of the conversion for each provider. For each provider there is a pie chart showing number of FOCUS dimensions added to the conversion plan vs pending.
-
-## License
-
-This project is licensed under the terms of the MIT license.
-
-## Contributing
-
-We're excited to work together. Please see [CONTRIBUTING.md] for information on how to get started.
-
-[CONTRIBUTING.md]: CONTRIBUTING.md
 
 [Install Poetry]: https://python-poetry.org/docs/#installation
 
@@ -96,3 +93,5 @@ We're excited to work together. Please see [CONTRIBUTING.md] for information on 
 [Rules Export CSV]: https://github.com/finopsfoundation/focus_converters/tree/master/conversion_rules_export/csv
 
 [pie charts]: https://github.com/finopsfoundation/focus_converters/tree/master/progress/README.md
+
+[Install AWS CLI]: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
