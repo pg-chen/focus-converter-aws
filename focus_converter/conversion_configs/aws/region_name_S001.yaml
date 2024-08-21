@@ -3,61 +3,61 @@ conversion_type: map_values
 conversion_args:
     value_list:
         - key: us-east-2
-          value: US East (Ohio) 
+          value: US East (Ohio)
         - key: us-east-1
-          value: US East (N. Virginia) 
+          value: US East (N. Virginia)
         - key: us-west-1
-          value: US West (N. California) 
+          value: US West (N. California)
         - key: us-west-2
-          value: US West (Oregon) 
+          value: US West (Oregon)
         - key: af-south-1
-          value: Africa (Cape Town)	
+          value: Africa (Cape Town)
         - key: ap-east-1
-          value: Asia Pacific (Hong Kong)	
+          value: Asia Pacific (Hong Kong)
         - key: ap-south-2
-          value: Asia Pacific (Hyderabad)	
+          value: Asia Pacific (Hyderabad)
         - key: ap-southeast-3
-          value: Asia Pacific (Jakarta)	
+          value: Asia Pacific (Jakarta)
         - key: ap-southeast-4
-          value: Asia Pacific (Melbourne)	
+          value: Asia Pacific (Melbourne)
         - key: ap-south-1
-          value: Asia Pacific (Mumbai) 
+          value: Asia Pacific (Mumbai)
         - key: ap-northeast-3
-          value: Asia Pacific (Osaka) 
+          value: Asia Pacific (Osaka)
         - key: ap-northeast-2
-          value: Asia Pacific (Seoul) 
+          value: Asia Pacific (Seoul)
         - key: ap-southeast-1
-          value: Asia Pacific (Singapore) 
+          value: Asia Pacific (Singapore)
         - key: ap-southeast-2
-          value: Asia Pacific (Sydney) 
+          value: Asia Pacific (Sydney)
         - key: ap-northeast-1
-          value: Asia Pacific (Tokyo) 
+          value: Asia Pacific (Tokyo)
         - key: ca-central-1
-          value: Canada (Central) 
+          value: Canada (Central)
         - key: ca-west-1
-          value: Canada West (Calgary)	
+          value: Canada West (Calgary)
         - key: eu-central-1
-          value: Europe (Frankfurt) 
+          value: Europe (Frankfurt)
         - key: eu-west-1
-          value: Europe (Ireland) 
+          value: Europe (Ireland)
         - key: eu-west-2
-          value: Europe (London) 
+          value: Europe (London)
         - key: eu-south-1
-          value: Europe (Milan)	
+          value: Europe (Milan)
         - key: eu-west-3
-          value: Europe (Paris) 
+          value: Europe (Paris)
         - key: eu-south-2
-          value: Europe (Spain)	
+          value: Europe (Spain)
         - key: eu-north-1
-          value: Europe (Stockholm) 
+          value: Europe (Stockholm)
         - key: eu-central-2
-          value: Europe (Zurich)	
+          value: Europe (Zurich)
         - key: il-central-1
-          value: Israel (Tel Aviv)	
+          value: Israel (Tel Aviv)
         - key: me-south-1
-          value: Middle East (Bahrain)	
+          value: Middle East (Bahrain)
         - key: me-central-1
-          value: Middle East (UAE)	
+          value: Middle East (UAE)
         - key: sa-east-1
           value: South America (São Paulo) 
     default_value: ""
